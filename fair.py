@@ -6,7 +6,8 @@ def unfair():
     while True:
         i = i + 1
         out = random.choice((True, False))  # True,
-        print(i, "th unfair toss:", out)
+        if not i % 100000:
+            print(i, "th unfair toss:", out)
         yield out
 
 
@@ -54,7 +55,8 @@ def fair_gen(g):
 
 fair_coin = fair_gen(unfair())
 j = 0
-for e in range(1000000):
+for e in range(10000000):
     j = j + 1
     fc = next(fair_coin)
-    print(j, "th fair toss:", fc)
+    if not j % 100000:
+        print(j, "th fair toss:", fc)
