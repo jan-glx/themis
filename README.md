@@ -1,7 +1,7 @@
 # Themis
-Provides a coroutine-baesed python implementation of an algorithm that allows to produces samples from a fair coin given samples from a possibly biased coin.
+Provides a coroutine-based Python implementation of an algorithm that allows producing samples from a fair coin given samples from a possibly biased coin.
 
-Thr relevant parts are:
+The relevant parts are:
 ```python
 def push_and_forward(coroutine, value):
     """Pushes a value into a coroutine and yields all its output neccessary to do so."""
